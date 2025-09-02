@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Formularios</h1>
+    <h3>1. La Etiqueta Principal: form</h3>
+    <p>Todo formulario comienza con la etiqueta <strong>form</strong>, que actúa como un contenedor para todos los campos de entrada.</p>
+    <form>
+  <!-- Aquí adentro van todos los campos del formulario -->
+</form>
+
+<h3>2. La Etiqueta Mágica: input</h3>
+    <p>Esta es la etiqueta más versátil. El atributo type cambia completamente su comportamiento.<br>
+<hr>
+
+<p>type="text": Un campo de texto de una sola línea.</p>
+     <input type="text"><br>
+<hr>
+
+<p>type="email": Un campo para correos electrónicos (el navegador puede validarlo).</p>
+     <input type="email"><br>
+<hr>
+
+<p>type="password": Un campo de contraseña que oculta los caracteres.</p>
+     <input type="password"><br>
+<hr>
+
+<p>type="checkbox": Una casilla de verificación (para aceptar términos, por ejemplo).</p>
+     <input type="checkbox"><br>
+<hr>
+
+<p>type="radio": Un botón de opción. Varios radios con el mismo atributo name forman un grupo donde solo se puede seleccionar uno.</p>
+<input type="radio" name="opcion"> Opción 1
+<input type="radio" name="opcion"> Opción 2
+<hr>
+
+<p>type="submit": Un botón que "envía" el formulario.</p>
+<input type="submit" value="Enviar Formulario">
+<hr>
+
+<h3>3. La mejor amiga del input: Label</h3>
+
+<p>La etiqueta <strong>label</strong> es crucial para la accesibilidad. Asocia un texto descriptivo a un campo del formulario.<br> 
+    Si haces clic en el label, el cursor se activa en el campo correspondiente.<br>
+Se conectan usando el atributo for en la <strong>label</strong> y el atributo id en el <strong>input</strong>.</p>
+<label for="nombre_usuario">Nombre:</label>
+<input type="text" id="nombre_usuario">
+<hr>
+
+
+<h3>4. Otras Etiquetas Útiles</h3>
+<p><strong>textarea:</strong> Para campos de texto de múltiples líneas, como un cuadro de comentarios.</p>
+<label for="comentario">Comentario:</label><br>
+<textarea id="comentario"></textarea>
+<hr>
+
+<p><strong>button: </strong> Una alternativa más flexible al <input type="submit">. </p>
+<button type="submit">Enviar</button>
+
+
+<h2>✅ Práctica de la Clase 06</h2>
+<form>
+    <h2>Formulario de Registro</h2>
+
+    <p> <label for="nombre_usuario">Nombre usuario:</label><br>
+         <input type="text" id="nombre_usuario" name="nombre_usuario" required></p>
+
+    <p> <label for="correo_usuario">Correo electrónico:</label><br>
+        <input type="email" id="correo_usuario" name="email" required> </p>
+
+    <p><label for="clave_usuario">Contraseña:</label><br>
+        <input type="password" id="clave_usuario" name="password" required></p>
+
+    <p> <label for="mensaje_usuario">Mensaje:</label><br>
+        <textarea id="mensaje_usuario" name="mensaje" rows="4" cols="30"></textarea> </p>
+
+    <p><label for="terminos_check">Acepto términos y condiciones</label><br>
+    <input type="checkbox" id="terminos_check" name="terminos"></p>
+
+    <p> <button type="submit">Enviar</button> </p>
+</form>
+
+</div>
+
+
+</body>
+</html>

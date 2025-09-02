@@ -1,0 +1,71 @@
+/* Selector de Etiqueta para el body */
+body {
+    /* background-color: Establece el color de fondo para toda la página. 
+       #f0f0f0 es un código hexadecimal para un gris muy claro, agradable a la vista. */
+    background-color: #f0f0f0; 
+    /* cambiar tipografia*/
+    font-family:Arial, sans-serif;
+}
+
+
+/* Selector de ID para el título del formulario */
+#formulario_titulo {
+    /* color: Cambia el color del TEXTO del elemento seleccionado. */
+    color: #1C1FE6;
+}
+
+/* Selector de Clase para el formulario completo */
+.trabajo_form {
+    /* background-color: Establece el color de fondo solo para este elemento. 
+       Usamos 'white' (blanco) para que contraste con el fondo gris del body. */
+    background-color: rgb(255, 255, 255); 
+
+    /* padding: Añade un espacio de "aire" o relleno DENTRO del borde del elemento. 
+       Piensa en ello como el margen interior de una foto en un marco. 
+       20px significa 20 píxeles de espacio por todos los lados (arriba, abajo, izquierda y derecha). */
+    padding: 20px; 
+
+    /* border-radius: ¡Esta propiedad redondea las esquinas! 
+       Un valor más alto crea esquinas más redondas. 10px crea un redondeo suave y moderno. */
+    border-radius: 10px;
+
+    /* width: Define el ancho del elemento. 
+       Es crucial añadir la unidad 'px' (píxeles) para que el navegador sepa de qué tamaño hacerlo. */
+    width: 250px; 
+
+    /* border: Dibuja un borde o línea alrededor del elemento. Se define con tres valores:
+       1px: El grosor del borde.
+       solid: El estilo de la línea (puede ser 'dotted' (punteado), 'dashed' (discontinuo), etc.).
+       #ccc: El color del borde (un gris claro). */
+    border: 1px solid #bebebe; 
+
+    text-align: center; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Selector de Clase para el botón de envío */
+.btn_enviar {
+    /* background-color: Le damos un color de fondo verde para que destaque. */
+    background-color: rgb(15, 99, 15);
+
+    /* color: Cambiamos el color del texto a blanco para que sea legible sobre el fondo verde. */
+    color: white;
+    
+    /* padding: Añadimos relleno también al botón para que no se vea apretado.
+       10px para arriba/abajo y 15px para izquierda/derecha. */
+    padding: 10px 15px;
+
+    /* border: none; Por defecto, los botones tienen un borde. Con 'none', se lo quitamos 
+       para que nuestro diseño se vea más limpio y moderno. */
+    border: none;
+
+    /* border-radius: También redondeamos las esquinas del botón para que coincida con el estilo del formulario. */
+    border-radius: 5px;
+}
+
+p{
+   text-align: left;/*para centrar el título.*/
+   font-size: 16px;/*especifica el tamaño de la letra o el texto en un elemento de una página web, controlando su altura y dimensión*/
+   line-height: 1.5; /*define la distancia vertical entre líneas de texto, controlando el espacio entre ellas*/
+   font-family: cursive;/*cambiar tipografia*/
+}
