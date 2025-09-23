@@ -1,0 +1,113 @@
+ /* --- ESTILOS GENERALES --- */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3efef;
+            color: #333;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
+            border-bottom: 2px solid;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        p { line-height: 1.6; }
+        img { max-width: 100%; display: block; border-radius: 8px; }
+
+
+
+
+        
+        /* ======================================================= */
+        /* LA DEUDA: NAVBAR CON FLEXBOX (¡EL EJEMPLO QUE FALTABA!) */
+        /* ======================================================= */
+        .navbar-flex {
+            background-color: #333;
+            padding: 15px 30px;
+            color: white;
+
+            /* ¡AQUÍ LA MAGIA, MAE! */
+            display: flex; /* 1. Activamos el modo flexible */
+            justify-content: space-between; /* 2. Manda a los hijos a cada extremo (logo a la izq, links a la der) */
+            align-items: center; /* 3. Centra todo verticalmente. ¡Adiós a los descuadres! */
+        }
+        .nav-logo {
+            font-size: 1.5rem; /* 1.5 veces el tamaño de letra base */
+            font-weight: bold;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px; /* Espacio entre los links */
+        }
+        .nav-links a:hover {
+            color: #00aaff; /* Colorcito cuando pasa el mouse */
+        }
+
+        /* ======================================================= */
+        /* AHORA SÍ, GRID COMO TIENE QUE SER                       */
+        /* ======================================================= */
+        .heroes-grid {
+            border: 3px dashed #E74C3C;
+            padding: 15px;
+            
+            /* 1. Encendemos el motor de Grid */
+            display: grid;
+            
+            /* 2. Creamos 3 columnas de tamaños iguales.
+               repeat(3, 1fr) es lo mismo que 1fr 1fr 1fr, pero más pro. */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* 3. Le damos un espacio de 20px entre cada héroe */
+            gap: 20px;
+        }
+        .heroe {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgb(83, 76, 76);
+            text-align: center;
+        }
+
+        /* ======================================================= */
+        /* EL VERDADERO PODER DE GRID: LAYOUT COMPLETO             */
+        /* ======================================================= */
+        .newspaper-layout {
+            display: grid;
+            /* Creamos una cuadrícula de 4 columnas de igual tamaño */
+            grid-template-columns: repeat(4, 1fr);
+            /* Definimos 3 filas con alturas específicas */
+            grid-template-rows: 100px 300px 80px;
+            gap: 15px;
+        }
+        .newspaper-layout > div { /* Estilo para todos los hijos directos del layout */
+            background-color: #5a86c0;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #1c71d1;
+        }
+
+        /* ¡AQUÍ VIENE EL CHANTE! */
+        .header {
+            /* Le decimos a este chunche que empiece en la línea de la columna 1
+               y que se expanda 4 columnas de ancho */
+            grid-column: 1 / span 4;
+        }
+        .sidebar {
+            /* Le decimos que empiece en la línea de la fila 2
+               y que se expanda 2 filas hacia abajo */
+            grid-row: 2 / span 2;
+        }
+        .main-content {
+            /* Le decimos que empiece en la columna 2 y que se expanda 3 columnas */
+            grid-column: 2 / span 3;
+        }
+        .footer {
+            /* Y este compa que se expanda 3 columnas también */
+            grid-column: 2 / span 3;
+        }

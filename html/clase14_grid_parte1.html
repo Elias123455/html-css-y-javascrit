@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox y Grid Nivel Pro</title>
+    <link rel="stylesheet" href="../css/clase14_grid_parte1.css">
+</head>
+<body>
+
+    <nav class="navbar-flex">
+        <div class="nav-logo">Mi Sitio Pro</div>
+        <div class="nav-links">
+            <a href="#">Inicio</a>
+            <a href="#">Galería</a>
+            <a href="#">Contacto</a>
+        </div>
+    </nav>
+    <title>Definiciones de CSS Grid</title>
+    
+</head>
+<body>
+
+    <h1>Glosario Rápido de CSS Grid</h1>
+
+    <p><strong>display: grid;</strong>: El botón de encendido. Con esto, el chante empieza. Le dice al contenedor que se convierta en una cuadrícula y que sus hijos se van a alinear como usted mande.</p>
+
+    <p><strong>grid-template-columns:</strong>: La propiedad más importante, la mera vena. Aquí usted define cuántas columnas quiere y qué tan anchas. Para esto se usa una unidad nueva y chivísima: la `fr` (unidad fraccional).</p>
+
+    <p><strong>Ejemplo de grid-template-columns: 1fr 1fr 1fr;</strong> = Tres columnas del mismo tamaño. El navegador calcula solo cuánto es cada `fr` y reparte el espacio. ¡Una salvada!</p>
+
+    <p><strong>Ejemplo de grid-template-columns: 2fr 1fr;</strong> = Dos columnas, la primera es el doble de ancha que la segunda. El espacio se reparte en 3 partes y la primera agarra 2.</p>
+    
+    <p><strong>grid-template-rows:</strong>: Es la misma vara que el de las columnas, pero para las filas. Aquí usted define qué tan altas quiere que sean las filas de su cuadrícula.</p>
+    
+    <p><strong>gap:</strong>: Igual que en Flexbox, es el espacio o "aire" que se le pone entre las celdas de la cuadrícula, tanto entre las filas como entre las columnas, para que los chunches no se vean todos pegados.</p>
+
+    <div class="container">
+        <h1>Mae, ahora sí. CSS Grid Nivel PRO</h1>
+
+        <h2>Ejemplo 1: Una cuadrícula simple pero matona</h2>
+        <div class="heroes-grid">
+            <div class="heroe">
+                <img src="../images/saitama.jpg" alt="Saitama">
+                <h3>Saitama</h3>
+                <p>Grid nos puso a los tres en una fila perfecta usando <strong>grid-template-columns: repeat(3, 1fr);</strong>.</p>
+            </div>
+            <div class="heroe">
+                <img src="../images/garou.jpg" alt="Garou">
+                <h3>Garou</h3>
+                <p>El <strong>gap: 20px;</strong> es el que nos da este "aire" o espacio para no estar pegados.</p>
+            </div>
+            <div class="heroe">
+                <img src="../images/llenos.jpg" alt="Genos">
+                <h3>Genos </h3>
+                <p>Cada uno de nosotros es un "Grid Item" dentro de un "Grid Container" que es la caja punteada.</p>
+            </div>
+        </div>
+
+        <hr style="margin: 50px 0;">
+
+        <h2>Ejemplo 2: Maquetando un layout tipo periódico</h2>
+        <p>Con Grid podemos decirle a un elemento que ocupe varias filas o columnas. ¡Vea esta salvada!</p>
+
+        <div class="newspaper-layout">
+            <div class="header"><h2>HEADER (Ocupa 4 columnas)</h2></div>
+            <div class="sidebar"><h2>SIDEBAR (Ocupa 2 filas de alto)</h2></div>
+            <div class="main-content"><h2>MAIN CONTENT (Ocupa 3 columnas)</h2></div>
+            <div class="footer"><h2>FOOTER</h2></div>
+        </div>
+    </div>
+
+</body>
+</html>

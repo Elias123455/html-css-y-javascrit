@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendiendo Flexbox</title>
+    <link rel="stylesheet" href="../css/clase13_flexbox.css">
+</head>
+<body>
+
+    <h1>¿Qué es Flexbox? La Guía Definitiva</h1>
+    <p>
+        Imagina que tienes una caja de libros (el <strong>contenedor</strong>) y varios libros dentro (los <strong>hijos</strong>). Flexbox te da superpoderes para decidir cómo se organizan esos libros dentro de la caja con unas pocas reglas muy simples.
+    </p>
+
+    <!-- ======================================================= -->
+    <h2>El Contenedor Padre (La Caja de Libros)</h2>
+    <p>
+        Para empezar, solo necesitamos decirle a la caja que será un contenedor flexible. Esto se hace con <strong>display: flex;</strong>.
+    </p>
+    
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    
+    <!-- ======================================================= -->
+    <h3>Propiedad 1: `flex-direction` (¿En fila o apilados?)</h3>
+    <p>Por defecto, los elementos se ponen en fila (<code>row</code>). Pero podemos cambiarlo para que se apilen en columna (<code>column</code>).</p>
+    
+    <div class="flex-container direction-column">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+    <!-- ======================================================= -->
+    <h3>Propiedad 2: `justify-content` (Alineación Horizontal)</h3>
+    <p>Esta propiedad nos dice cómo distribuir los elementos a lo largo del eje principal (la fila).</p>
+    
+    <p><strong>justify-content: center;</strong></p>
+    <div class="flex-container justify-center">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    
+    <p><strong>justify-content: space-between;</strong></p>
+    <div class="flex-container justify-between">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+    
+    <!-- ======================================================= -->
+    <h3>Propiedad 3: `flex-wrap` (¿Qué pasa si no caben?)</h3>
+    <p>Por defecto, Flexbox intentará meter todos los elementos en una sola línea, aunque se aplasten. Con <strong>flex-wrap: wrap;</strong>, les permitimos bajar a la siguiente línea.</p>
+
+    <div class="flex-container wrap-example">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+    </div>
+
+
+
+    <div class="semaforo">
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div class="red"></div>
+    </div>
+</body>
+</html>

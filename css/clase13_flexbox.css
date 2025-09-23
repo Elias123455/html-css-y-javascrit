@@ -1,0 +1,100 @@
+/* --- Estilos base para que se vea bien --- */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    color: #333;
+}
+p {
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+/* --- Estilos para los ejemplos de Flexbox --- */
+.flex-container {
+    /* El borde nos ayuda a visualizar el contenedor padre */
+    border: 3px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    /* LA PROPIEDAD MÁS IMPORTANTE:
+       Esto convierte el div en un contenedor flexible. */
+    display: flex;
+}
+
+.flex-item {
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 5px; /* Damos un pequeño margen para que no estén pegados */
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* --- Ejemplo 1: flex-direction --- */
+.direction-column {
+    /* Cambia el eje principal a vertical.
+       Ahora los elementos se apilan uno encima del otro. */
+    flex-direction: column;
+}
+
+/* --- Ejemplo 2: justify-content --- */
+.justify-center {
+    /* Centra los elementos a lo largo del eje principal (horizontal). */
+    justify-content: center;
+}
+.justify-between {
+    /* Distribuye los elementos, poniendo el primero al inicio,
+       el último al final y repartiendo el espacio sobrante entre ellos. */
+    justify-content: space-between;
+}
+
+
+/* --- Ejemplo 3: flex-wrap --- */
+.wrap-example {
+    /* Si los elementos no caben en una línea,
+       esta propiedad les permite "envolverse" y pasar a la siguiente. */
+    flex-wrap: wrap;
+}
+
+
+.semaforo{
+    background-color: rgba(10, 10, 10, 0.959);
+    margin: auto;
+    height: 400px;
+    width: 210px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.yellow{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color:yellow
+    
+  }
+
+
+.green{
+    background-color: green;
+        width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.red{
+    background-color: red;
+        width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">    
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox direction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+.container{
+       border: 3px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    /* LA PROPIEDAD MÁS IMPORTANTE:
+       Esto convierte el div en un contenedor flexible. */
+    display: flex;
+    
+}
+
+.container-reverse{
+       border: 3px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    /* LA PROPIEDAD MÁS IMPORTANTE:
+       Esto convierte el div en un contenedor flexible. */
+    display: flex;
+   flex-direction: row-reverse;   
+}
+
+.container-colum{
+       border: 3px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    /* LA PROPIEDAD MÁS IMPORTANTE:
+       Esto convierte el div en un contenedor flexible. */
+    display: flex;
+   flex-direction: column;  
+}
+
+.container-colum-reverse{
+       border: 3px solid #007bff;
+    background-color: #f0f8ff;
+    padding: 10px;
+    margin-bottom: 30px;
+
+    /* LA PROPIEDAD MÁS IMPORTANTE:
+       Esto convierte el div en un contenedor flexible. */
+    display: flex;
+   flex-direction: column-reverse;  
+}
+
+.yellow{
+     width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin-right: 10px;
+}
+
+
+.green{
+    background-color: rgb(28, 226, 200);
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.red{
+    background-color: rgb(247, 116, 116);
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+</style>
+
+</head>
+<body>
+ <h5>Flex: </h5>
+   <section class="container">
+<article class="yellow">Flex item 1</article>
+<article class="green">Flex item 2</article>
+<article class="red">Flex item 3</article>
+   </section> 
+</body>
+
+ <h5>Flex: reverse</h5>
+   <section class="container-reverse">
+<article class="yellow">Flex item 1</article>
+<article class="green">Flex item 2</article>
+<article class="red">Flex item 3</article>
+   </section> 
+
+    <h5>Flex: colum</h5>
+   <section class="container-colum">
+<article class="yellow">Flex item 1</article>
+<article class="green">Flex item 2</article>
+<article class="red">Flex item 3</article>
+   </section> 
+
+   <h5>Flex: colum reverse</h5>
+   <section class="container-colum-reverse">
+<article class="yellow">Flex item 1</article>
+<article class="green">Flex item 2</article>
+<article class="red">Flex item 3</article>
+   </section> 
+</html>

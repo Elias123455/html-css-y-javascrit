@@ -1,0 +1,94 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 20px;
+}
+
+h1, h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+.container {
+    border: 3px dashed #ccc;
+    padding: 15px;
+    margin-top: 15px;
+    min-height: 150px; /* Altura mínima para ver bien los ejemplos */
+}
+
+.box {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+    /* Usamos display: inline-block para que se pongan uno al lado del otro */
+    display: inline-block; 
+}
+
+
+/* --- 1. STATIC --- */
+.static-box {
+    background-color: #e0e0e0;
+    /* No necesita 'position: static;' porque es el valor por defecto */
+}
+
+
+/* --- 2. RELATIVE --- */
+.relative-box {
+    background-color: #87CEEB; /* Azul cielo */
+    position: relative;
+    /* Se mueve 20px hacia abajo y 20px a la derecha DESDE SU POSICIÓN ORIGINAL */
+    top: 20px;
+    left: 20px;
+}
+
+
+/* --- 3. ABSOLUTE --- */
+.absolute-container {
+    /* ¡CRUCIAL! Este es el ANCLA para el elemento 'absolute' de adentro. */
+    position: relative; 
+    height: 200px;
+}
+
+.absolute-box {
+    background-color: #90EE90; /* Verde claro */
+    position: absolute;
+    /* Se posiciona 10px desde abajo y 10px desde la derecha DEL CONTENEDOR PADRE */
+    bottom: 10px;
+    right: 10px;
+}
+
+
+/* --- 4. FIXED --- */
+.fixed-box {
+    background-color: #FFB6C1; /* Rosa claro */
+    position: fixed;
+    /* Se posiciona relativo a la VENTANA DEL NAVEGADOR */
+    bottom: 20px;
+    right: 20px;
+    z-index: 100; /* Un z-index alto asegura que esté por encima de otros elementos */
+}
+
+
+/* --- 5. STICKY --- */
+.sticky-container {
+    height: 300px;
+    overflow-y: scroll; /* Hacemos que esta caja tenga su propio scroll */
+    position: relative; /* Contexto para el sticky header */
+}
+
+.sticky-header {
+    background-color: #FFA500; /* Naranja */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    
+    position: sticky;
+    /* Se "pegará" a 0px de la parte superior DEL CONTENEDOR CON SCROLL */
+    top: 0; 
+}

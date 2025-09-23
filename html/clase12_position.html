@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/clase12_position.css">
+    <title>Guía de Position en CSS</title>
+</head>
+<body>
+
+    <h1>Guía Interactiva de Position en CSS</h1>
+    <p>
+        La propiedad <strong>position</strong> define cómo se coloca un elemento. Nos permite sacarlo del flujo normal del documento y ubicarlo con precisión usando <strong>top</strong>, <strong>right</strong>, <strong>bottom</strong> y <strong>left</strong>.
+    </p>
+
+    <hr>
+
+    <!-- ========= 1. STATIC (El valor por defecto) ========= -->
+    <h2>1. position: static</h2>
+    <p>
+        Es el valor por defecto. El elemento se posiciona según el flujo normal de la página. Las propiedades <strong>top, right, bottom, left</strong> y <strong>z-index</strong> NO le afectan.
+    </p>
+    <div class="container">
+        <div class="box static-box">static (Caja 1)</div>
+        <div class="box static-box">static (Caja 2)</div>
+        <div class="box static-box">static (Caja 3)</div>
+    </div>
+
+    <hr>
+
+    <!-- ========= 2. RELATIVE ========= -->
+    <h2>2. position: relative</h2>
+    <p>
+        El elemento se mueve <strong>relativo a su posición original</strong>. Deja un "hueco" donde debería haber estado. Lo más importante: se convierte en el <strong>"punto de anclaje"</strong> para sus hijos con `position: absolute`.
+    </p>
+    <div class="container">
+        <div class="box">Caja 1</div>
+        <div class="box relative-box">relative (Caja 2)<br>Me moví 20px desde mi sitio original</div>
+        <div class="box">Caja 3</div>
+    </div>
+
+    <hr>
+
+    <!-- ========= 3. ABSOLUTE ========= -->
+    <h2>3. position: absolute</h2>
+    <p>
+        El elemento se saca del flujo normal y se posiciona <strong>relativo a su "ancestro posicionado" más cercano</strong> (un padre o abuelo con `position` diferente a `static`). Si no encuentra ninguno, se posiciona relativo al `<body>`.
+    </p>
+    <div class="container absolute-container"> <!-- Este es el ANCLA -->
+        Contenedor Padre (position: relative)
+        <div class="box absolute-box">absolute (Hijo)<br>Estoy anclado a mi padre</div>
+    </div>
+
+    <hr>
+
+    <!-- ========= 4. FIXED ========= -->
+    <h2>4. position: fixed</h2>
+    <p>
+        El elemento se saca del flujo normal y se posiciona <strong>relativo a la ventana del navegador</strong>. No se mueve aunque hagas scroll. ¡Ideal para menús, pop-ups o botones de "volver arriba"!
+    </p>
+    <div class="box fixed-box">
+        fixed<br>¡No me muevo!
+    </div>
+
+    <hr>
+
+    <!-- ========= 5. STICKY ========= -->
+    <h2>5. position: sticky</h2>
+    <p>
+        Es un híbrido. Se comporta como `relative` hasta que haces scroll y llega a un punto definido (ej. `top: 0`), momento en el que se comporta como `fixed`. Perfecto para encabezados de sección que se "pegan" arriba.
+    </p>
+    <div class="container sticky-container">
+        <div class="sticky-header">Soy un encabezado STICKY</div>
+        <p>Haz scroll dentro de esta caja...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+        <p>Lorem ipsum dolor sit amet...</p>
+    </div>
+
+    <!-- Contenido extra para poder hacer scroll y probar 'fixed' -->
+    <div style="height: 1000px; background-color: #f0f0f0; margin-top: 20px;">
+        <p>Espacio para hacer scroll...</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+
+
+body {
+    background-color: #e9e9e9d3;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    padding-top: 70px; /* Ajusta este valor si tu navbar es más alto o bajo */
+}
+
+.product-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una sombra suave */
+    overflow: hidden; /* Esto es para que todo se quede dentro de las esquinas redondeadas */
+
+    /* ¡PUNTO CLAVE! Hacemos que la tarjeta sea nuestro "punto de anclaje" */
+    position: relative; 
+}
+
+
+.products-container {
+    display: flex; /* Esto es un pequeño adelanto para centrar la tarjeta ;) */
+    justify-content: center;
+    align-items: center;
+    display: flex;          /* 1. Activa Flexbox */
+    flex-wrap: wrap;        /* 2. Permite que las tarjetas bajen a la siguiente fila */
+    justify-content: center;/* 3. Centra las tarjetas horizontalmente */
+    gap: 25px;              /* 4. Crea un espacio de 25px entre cada tarjeta */
+    padding: 20px;          /* Un poco de espacio alrededor del contenedor */
+}
+
+.product-image {
+    width: 100%;
+    display: block; /* Quitamos un pequeño espacio que las imágenes a veces tienen debajo */
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer; /* El cursor se convierte en una manita */
+}
+
+/*----------------------------------------------------------------------------------------------*/
+/* =========================================== */
+/* MINI-RETO CREATIVO: SEMÁFORO           */
+/* =========================================== */
+
+/* --- Contenedor del Semáforo --- */
+.traffic-light {
+    background-color: #333; /* Un fondo oscuro para el cuerpo del semáforo */
+    padding: 20px;
+    border-radius: 10px;
+    width: 70px; /* Un ancho fijo y pequeño */
+    
+    /* Activamos Flexbox también aquí */
+    display: flex;
+
+    /* flex-direction: column;
+       ¡Cambiamos el juego! Esto altera el eje principal de Flexbox para que
+       sea vertical. Ahora los elementos se apilarán uno encima del otro. */
+    flex-direction: column; 
+    
+    /* align-items: center;
+       Cuando el eje es vertical, align-items controla la alineación HORIZONTAL.
+       'center' centra las luces dentro del cuerpo del semáforo. */
+    align-items: center;    
+    
+    /* gap: 10px;
+       Crea el espacio vertical entre cada una de las luces. */
+    gap: 10px;        
+ 
+    cursor: cell;
+    margin: auto;
+}
+
+/* --- Estilos para cada Luz (círculos) --- */
+.light {
+    width: 50px;
+    height: 50px;
+    
+    /* border-radius: 50%;
+       El truco para hacer un círculo perfecto: si el ancho y el alto
+       son iguales, un border-radius del 50% redondeará las esquinas
+       hasta que se toquen, formando un círculo. */
+    border-radius: 50%; 
+}
+
+/* --- Clases de Color para cada Luz --- */
+.red { background-color: #E74C3C; }
+.yellow { background-color: #F1C40F; }
+.green { background-color: #2ECC71; }
