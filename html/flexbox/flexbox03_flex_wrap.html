@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flex-wrap a Fondo (Corregido)</title>
+    <title>Flex-wrap a Fondo </title>
     <style>
         /* --- Estilos Generales para que se vea tuanis --- */
         body {
@@ -34,11 +34,6 @@
             padding: 15px;
             margin-bottom: 40px;
             display: flex;
-
-            /* =========================================== */
-            /* ¡ESTA ES LA CORRECCIÓN, MAE!                */
-            /* =========================================== */
-            /* 1. Le ponemos un ancho máximo para forzar el 'wrap' en pantallas grandes. */
             max-width: 1200px;
             /* 2. Y lo centramos en la página para que se vea pro. */
             margin-left: auto;
@@ -67,7 +62,8 @@
 
     <h1>Mae, entendamos `flex-wrap` (Ahora sí, a prueba de todo)</h1>
     <p>
-        La propiedad <code>flex-wrap</code> controla lo que pasa cuando los hijos (los chunches) de un contenedor flexible ya no caben en una sola línea.
+        La propiedad <code>flex-wrap</code> controla lo que pasa cuando los hijos (los chunches) de un 
+        contenedor flexible ya no caben en una sola línea.
     </p>
 
     <!-- ======================================================= -->
@@ -78,7 +74,14 @@
        Ahora se ve clarito cómo los chunches se salen del corral porque el contenedor tiene un límite y no les da pelota.
     </p>
     <div class="flex-container" style="flex-wrap: nowrap;">
-        <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div><div class="flex-item">6</div><div class="flex-item">7</div><div class="flex-item">8</div>
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
     </div>
 
     <!-- ======================================================= -->
@@ -86,10 +89,14 @@
     <!-- ======================================================= -->
     <h2>2. <code>flex-wrap: wrap;</code> (La salvada)</h2>
     <p>
-        ¡Pura vida! Como el contenedor tiene un tope, a los chunches no les queda más que bajar a la siguiente fila. Ahora el ejemplo funciona en cualquier pantalla.
+        ¡Pura vida! Como el contenedor tiene un tope, a los chunches no les queda más que 
+        bajar a la siguiente fila. Ahora el ejemplo funciona en cualquier pantalla.
     </p>
     <div class="flex-container" style="flex-wrap: wrap;">
-        <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div><div class="flex-item">6</div><div class="flex-item">7</div><div class="flex-item">8</div>
+        <div class="flex-item">1</div> <div class="flex-item">2</div>
+        <div class="flex-item">3</div> <div class="flex-item">4</div>
+        <div class="flex-item">5</div> <div class="flex-item">6</div>
+        <div class="flex-item">7</div> <div class="flex-item">8</div>
     </div>
 
     <!-- ======================================================= -->
@@ -100,8 +107,12 @@
         Igual que el de arriba, pero los chunches que bajan se van para el cielo.
     </p>
     <div class="flex-container" style="flex-wrap: wrap-reverse;">
-        <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div><div class="flex-item">6</div><div class="flex-item">7</div><div class="flex-item">8</div>
+        <div class="flex-item">1</div> <div class="flex-item">2</div>
+        <div class="flex-item">3</div> <div class="flex-item">4</div>
+        <div class="flex-item">5</div> <div class="flex-item">6</div>
+        <div class="flex-item">7</div> <div class="flex-item">8</div>
     </div>
 
+    
 </body>
 </html>

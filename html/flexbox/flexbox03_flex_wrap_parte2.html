@@ -79,52 +79,101 @@
 
     <div class="section">
         <h2>Parte 1: Los 3 Sabores de `flex-wrap`</h2>
-        <p>Estos son los únicos 3 valores que existen. La diferencia es si los chunches se apachurran, si bajan ordenados, o si bajan al revés.</p>
+        <p>Estos son los únicos 3 valores que existen. La diferencia es si los chunches se apachurran, 
+            si bajan ordenados, o si bajan al revés.</p>
 
         <h3><code>flex-wrap: nowrap;</code> (El terco)</h3>
-        <p>Intenta meter todo en una fila aunque no quepa. Como le pusimos un ancho máximo al contenedor, ahora se ve clarito cómo se desbordan.</p>
+        <p>Intenta meter todo en una fila aunque no quepa. Como le pusimos un ancho máximo al contenedor,
+             ahora se ve clarito cómo se desbordan.</p>
         <div class="flex-container" style="flex-wrap: nowrap;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div>
         </div>
 
         <h3><code>flex-wrap: wrap;</code> (El tuanis)</h3>
-        <p>Ahora, sin importar el tamaño de la pantalla, el contenedor tiene un límite y los chunches se ven obligados a bajar a la siguiente fila.</p>
+        <p>Ahora, sin importar el tamaño de la pantalla, el contenedor tiene un límite y los chunches se ven obligados a bajar 
+            a la siguiente fila.</p>
         <div class="flex-container" style="flex-wrap: wrap;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
         </div>
 
         <h3><code>flex-wrap: wrap-reverse;</code> (El pachuco)</h3>
         <p>Igual que el de arriba, pero la segunda fila se va para el cielo en lugar de para el suelo.</p>
         <div class="flex-container" style="flex-wrap: wrap-reverse;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
         </div>
     </div>
 
     <div class="section">
         <h2>Parte 2: La Vara se Pone Seria - Combinando `flex-wrap`</h2>
-        <p>Mae, aquí es donde se ve el poder de verdad. `flex-wrap` por sí solo es tuanis, pero cuando lo junta con otros compas, ¡es otro nivel!</p>
+        <p>Mae, aquí es donde se ve el poder de verdad. `flex-wrap` por sí solo es tuanis, pero cuando lo
+             junta con otros compas, ¡es otro nivel!</p>
 
         <h3>Combinación 1: <code>wrap</code> + <code>justify-content</code></h3>
         <p>Vea cómo con <code>center</code>, la última fila (que solo tiene dos chunches) se centra solita. ¡Una salvada!</p>
         <div class="flex-container" style="flex-wrap: wrap; justify-content: center;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
         </div>
         
         <h3>Combinación 2: <code>wrap</code> + <code>align-content</code> (¡LA MÁS IMPORTANTE!)</h3>
         <p>
-            ¡Ojo a esta salvada, Elías! <code>align-content</code> ordena LAS FILAS MISMAS DENTRO del contenedor. Le puse más altura al contenedor para que se note el efecto.
+            ¡Ojo a esta salvada, Elías! <code>align-content</code> ordena LAS FILAS MISMAS DENTRO del contenedor. 
+            Le puse más altura al contenedor para que se note el efecto.
         </p>
         <p>Con <code>align-content: space-around;</code>, las filas se reparten todo el espacio vertical disponible.</p>
         <div class="flex-container" style="flex-wrap: wrap; height: 450px; align-content: space-around;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
         </div>
 
         <p>Y con <code>align-content: center;</code>, todas las filas se agrupan en el puro centro del contenedor.</p>
         <div class="flex-container" style="flex-wrap: wrap; height: 450px; align-content: center;">
-            <div class="flex-item">1</div><div class="flex-item">2</div><div class="flex-item">3</div><div class="flex-item">4</div><div class="flex-item">5</div>
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
         </div>
     </div>
 
+     <div class="section">
+        <h2>Parte 2: `flex-flow` - El Combo Agrandado</h2>
+        <p>
+            Mae, aquí está el truco para vagos que le decía. <code>flex-flow</code> es un atajo (un "shorthand") para poner 
+            <code>flex-direction</code> y <code>flex-wrap</code> en una sola línea. ¡Pura eficiencia, tata!
+        </p>
+
+        <h3>Forma Larga (Como lo hacíamos antes)</h3>
+        <p><code>display: flex;</code><br><code>flex-direction: row;</code><br><code>flex-wrap: wrap;</code></p>
+        <div class="flex-container" style="flex-direction: row; flex-wrap: wrap;">
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
+        </div>
+
+        <h3>Forma Corta con <code>flex-flow</code> (¡El chante pro!)</h3>
+        <p><code>display: flex;</code><br><code>flex-flow: row wrap;</code></p>
+        <p>El primer valor es para la dirección, el segundo para el wrap. ¡Hace exactamente lo mismo, pero con menos teclado!</p>
+        <div class="flex-container" style="flex-flow: row wrap;">
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
+        </div>
+        
+        <h3>Otro Ejemplo: ¡Columna y en reversa!</h3>
+        <p><code>flex-flow: column-reverse wrap;</code></p>
+        <div class="flex-container" style="flex-flow: column-reverse wrap; height: 500px;">
+            <div class="flex-item">1</div><div class="flex-item">2</div>
+            <div class="flex-item">3</div><div class="flex-item">4</div>
+            <div class="flex-item">5</div><div class="flex-item">6</div>
+        </div>
+    </div>
 </body>
 </html>
 
